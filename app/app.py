@@ -9,7 +9,7 @@ from custom_transform import AreaUnitConverter
 #model = joblib.load('../model/xgb_price_pipeline.pkl')
 mlflow.set_tracking_uri("file:mlruns")
 
-model = mlflow.pyfunc.load_model("file:/app/mlruns/471310202707317169/a2f3a59be7654ae799101585623431b2/artifacts/xgb_price_pipeline")
+model = mlflow.pyfunc.load_model("file:mlruns/471310202707317169/a2f3a59be7654ae799101585623431b2/artifacts/xgb_price_pipeline")
 
 
 app = FastAPI(title='Zameen Price Prediction API')
