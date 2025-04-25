@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/Projects/Pakistan%20Real%20Estate%20Price%20Prediction/model/mlruns/471310202707317169/a2f3a59be7654ae799101585623431b2/artifacts
+end_time: 1745490151903
+entry_point_name: ''
+experiment_id: '471310202707317169'
+lifecycle_stage: active
+run_id: a2f3a59be7654ae799101585623431b2
+run_name: nimble-cat-930
+run_uuid: a2f3a59be7654ae799101585623431b2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745490113922
+status: 3
+tags: []
+user_id: MCS
