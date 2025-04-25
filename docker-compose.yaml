@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.10.2
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app/mlruns:/mlflow/mlruns  # Mount the mlruns directory from the app folder to mlflow container
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000  # Point to the mlflow service
+
+  fastapi-app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app  # Mount the app folder, which includes mlruns, into the FastAPI container
+    depends_on:
+      - mlflow
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000  # Point FastAPI app to mlflow service
