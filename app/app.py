@@ -4,7 +4,7 @@ import joblib
 import mlflow.pyfunc
 import pandas as pd
 import numpy as np
-from custom_transform import AreaUnitConverter
+from .custom_transform import AreaUnitConverter
 
 #model = joblib.load('../model/xgb_price_pipeline.pkl')
 mlflow.set_tracking_uri("file:mlruns")
